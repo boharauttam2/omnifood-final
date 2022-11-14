@@ -1,0 +1,246 @@
+/* *************
+SMALLER DESKTOP
+Below 1391px
+*****************/
+
+@media(max-width: 87em) {
+
+     .section-hero>.container,
+     .footer>.container {
+          max-width: 110rem;
+     }
+
+     .heading-primary {
+          font-size: 4.8rem;
+     }
+
+     .heading-secondary {
+          font-size: 3.9rem;
+     }
+
+     h3 {
+          font-size: 3.2rem;
+     }
+
+     /* 
+     .testimonials__testimony {
+          padding: 6.4rem;
+     } */
+
+     .testimonials__grid {
+
+          grid-template-columns: 1.5fr 1fr;
+     }
+
+     .gallery__grid {
+          grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+/* *************
+LANDSCAPE TABLET
+Below 1175px
+*****************/
+
+@media(max-width: 73em) {
+     html {
+          font-size: 56.25%;
+     }
+
+     .header {
+          padding: 0 1.2rem;
+     }
+
+     .pricing__plan {
+          width: 74%;
+     }
+}
+
+/* *************
+POTRAIT TABLET
+Below 996px
+*****************/
+
+@media(max-width: 62.25em) {
+     html {
+          font-size: 50%;
+     }
+
+     .hero__grid {
+          grid-template-columns: 1fr;
+     }
+
+     .testimonials__grid {
+          grid-template-columns: 1fr;
+     }
+
+     .gallery__grid {
+          grid-template-columns: repeat(6, 1fr);
+     }
+
+     .hero__grid {
+          text-align: center;
+     }
+
+     .hero__img-box>img {
+          width: 60%;
+     }
+
+     .hero__delivered,
+     .hero__btns {
+          justify-content: center;
+          margin-bottom: 2.4rem;
+     }
+
+     .meal__content {
+          padding: 1.2rem 3.2rem 3.2rem;
+     }
+
+     .plan__content {
+          padding: 2.4rem 3.2rem 2.8rem;
+     }
+
+     .form__grid {
+          grid-template-columns: 1fr;
+     }
+
+     .cta__grid {
+          grid-template-columns: 1.5fr 1fr;
+     }
+
+     /* Mobile Navigation */
+     .nav-mobile-btn {
+          display: block;
+          background: none;
+          border: none;
+          z-index: 3;
+     }
+
+     .nav-open .nav-icon[name="close-outline"] {
+          display: block;
+     }
+
+     .nav-open .nav-icon[name="menu-outline"] {
+          display: none;
+     }
+
+     .header {
+          position: relative;
+     }
+     .header__nav {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+
+          z-index: 2;
+          opacity: 0;
+          pointer-events: none;
+          visibility: hidden;
+
+          transform: translateX(100%);
+          transition: 500ms ease;
+     }
+
+     .nav-open .header__nav {
+          background-color: rgba(255, 255, 255, 0.963);    
+          opacity: 1;
+          pointer-events: auto;
+          visibility: visible;
+          transform: translateX(0);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .nav-open .header__list {
+          flex-direction: column;
+          gap: 3.2rem;
+     }
+
+     .meals__grid {
+          grid-template-columns: repeat(2, 1fr);
+     }
+
+     .meals__diet {
+          grid-column: 1/ -1;
+          justify-self: center;
+     }
+
+     .gallery__grid {
+          grid-template-columns: repeat(4, 1fr);
+     }
+}
+
+
+/* *************
+SMALL TABLET
+Below 776PX
+*****************/
+
+@media(max-width: 48.5em) {
+
+     .grid--2-cols,
+     .grid--3-cols,
+     .grid--4-cols {
+          grid-template-columns: 1fr;
+     }
+     .section-meals {
+          padding-top: 2.4rem;
+     }
+
+     .steps__grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+     }
+
+     .steps__img{
+          transform: translateY(6rem);
+     }
+
+     .steps__img:nth-child(2) {
+          grid-row: 1;
+     }
+
+     .steps__img:nth-child(6) {
+          grid-row: 5;
+     }
+
+     .footer__grid {
+          grid-template-columns: repeat(6, 1fr);
+     }
+
+     .nav-col {
+          grid-row: 1;
+          grid-column: span 2;
+
+     }
+
+     .logo-col,
+     .address-col {
+          grid-column: span 2;
+     }
+
+     .cta__grid {
+          grid-template-columns: 1fr;
+     }
+
+     .cta__image-box {
+          height: 30rem;
+          grid-row: 1;
+     }
+
+     .pricing__grid {
+          align-items: center;
+     }
+
+     .pricing__plan {
+          width: 100%;
+     }
+
+     .gallery__grid {
+          grid-template-columns: repeat(2, 1fr);
+     }
+
+}

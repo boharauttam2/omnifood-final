@@ -1,0 +1,745 @@
+/* 
+--- TYPOGRAPHY
+8/ 10/ 12/ 16/ 20/ 25/ 31/ 39/ 48/ 61/ 76
+
+--- COLOR
+MAIN: TINT: #fdf2e9
+--- WHITESPACE
+2/ 4/ 8/ 12/ 16/ 24/ 32/ 48/ 64/ 80/ 96/ 128
+
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    line-height: 1.7;
+    color: #4b5563;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* *************
+GRID
+************** */
+
+.grid {
+    display: grid;
+    gap: 4.8rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: 50% 50%;
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.footer__grid {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.grid--align-v {
+    align-items: center;
+}
+
+.grid:not(:last-child) {
+    margin-bottom: 4.8rem;
+}
+
+/* *************
+FLEX
+************** */
+
+.flex-nrml {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.flex-vrt {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+/* *************
+CONTAINER
+************** */
+
+.container {
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.container-lr {
+    max-width: 130rem;
+}
+
+.container-md {
+    max-width: 120rem;
+}
+
+.container-md {
+    max-width: 110rem;
+}
+
+/* *************
+MARGIN
+************** */
+
+.margin-btm--md {
+    margin-bottom: 4.8rem !important;
+}
+
+.margin-btm--lr {
+    margin-bottom: 6.4rem;
+}
+
+/* *************
+LIST ITEM
+************** */
+
+.list__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list__item::before {
+    content: "";
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-image: url("../img/orange-tick.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 12px;
+}
+
+/* *************
+BUTTON
+************** */
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 500ms ease;
+}
+
+/* Header button CTA */
+.header__list a.btn--header-cta {
+    color: white;
+    padding: 0.8rem 1.2rem;
+    background-color: #f97316;
+}
+
+.btn--header-cta:hover {
+    box-shadow: inset 0 36.5px 0 0 red;
+}
+
+/* Hero button */
+/* Increasing the specificity */
+.btn.btn--full {
+    background-color: #f97316;
+    color: white;
+    padding: 0.9rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.btn--full::before {
+    content: "";
+    background-color: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    border-radius: 1.1rem;
+    opacity: 0;
+    transition: 500ms ease;
+    z-index: -1;
+}
+
+.btn.btn--full:hover::before {
+    opacity: 1;
+    left: 0;
+    right: 0;
+}
+
+/* Button outline  */
+.btn.btn--outline {
+    background-color: white;
+    padding: 0.9rem 2rem;
+    color: #4b5563;
+}
+
+.btn.btn--outline:hover {
+    box-shadow: inset 0 0 0 2px rgba(245, 245, 245, 0.452);
+}
+
+/* *************
+HEADINGS
+************** */
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    line-height: 1;
+    margin-bottom: 3.2rem;
+    color: #1f2937;
+}
+
+.heading-primary {
+    font-size: 6.1rem;
+}
+
+.heading-secondary {
+    font-size: 4.8rem;
+}
+
+.heading-tertiary {
+    font-size: 3.9rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+    margin-bottom: 1.8rem;
+}
+
+h5 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.sub-heading {
+    font-size: 1.8rem;
+    font-family: arial;
+    letter-spacing: 1.2px;
+    color: #f97316;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+}
+
+p {
+    margin-bottom: 2.4rem;
+}
+
+.small {
+    display: inline;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+/* TAGS */
+.tag {
+    border-radius: 1.1rem;
+    color: black;
+    padding: 0.6rem;
+
+    font-family: arial;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.tag--vegetarian {
+    background-color: green;
+}
+
+.tag--vegan {
+    background-color: aquamarine;
+}
+
+.tag--paleo {
+    background-color: yellow;
+}
+
+*:focus {
+    box-shadow: 0 0 0 8px rgba(128, 128, 128, 0.491);
+}
+
+/* *************
+HEADER
+************** */
+
+.header {
+    background-color: #fdf2e9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* For sticky */
+    padding: 0 3.2rem;
+    height: 8rem;
+}
+
+.header__logo {
+    width: 150px;
+}
+
+.header__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.header__link:link,
+.header__link:visited {
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #4b5563;
+    transition: 500ms ease;
+}
+
+.header__link:hover,
+.header__link:active {
+    color: #f97316;
+}
+/* STICKY */
+.sticky header{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.93);
+
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.389);
+    z-index: 999;
+}
+/* *************
+MOBILE NAVIGATION
+************** */
+.nav-mobile-btn {
+    display: none;
+}
+
+.nav-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.nav-icon[name="close-outline"] {
+    display: none;
+}
+
+/* *************
+HERO
+************** */
+.section-hero {
+    padding: 4.8rem 0 6.4rem;
+    background-color: #fdf2e9;
+}
+
+.hero__btns {
+    list-style-type: none;
+    display: flex;
+    gap: 1.6rem;
+}
+
+.hero_delivered {
+    align-items: center;
+}
+
+.delivered__imgs img {
+    width: 50px;
+    border: 4px solid #fdf2e9;
+    border-radius: 50%;
+}
+
+.delivered-imgs__list {
+    list-style-type: none;
+}
+
+.delivered-imgs__list>li {
+    margin-left: -50px;
+}
+
+.delivered-imgs__list>li:first-child {
+    margin: 0;
+}
+
+/* *************
+FEATURED COMPANY
+************** */
+
+.section-featured {
+    padding: 4.8rem 0 3.2rem;
+}
+
+.featured-company__list {
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.featured-company__list img {
+    filter: brightness(0);
+    opacity: 0.6;
+}
+
+/* *************
+HOW
+************** */
+.section-how {
+    padding: 9.6rem 0;
+}
+
+.step__number {
+    font-size: 6.1rem;
+}
+
+.steps__img img {
+    width: 40%;
+}
+
+.steps__img {
+    text-align: center;
+    position: relative;
+}
+
+.steps__img::before {
+    content: "";
+    width: 45%;
+    padding-bottom: 45%;
+    background-color: #fdf2e9;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.steps__img::after {
+    content: "";
+    width: 60%;
+    padding-bottom: 60%;
+    background-color: #edb181;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+/* *************
+MEALS
+************** */
+
+.section-meals {
+    padding: 9.6rem 0;
+}
+
+.meals__meal {
+    border-radius: 1.1rem;
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.198);
+    overflow: hidden;
+    transition: 500ms ease;
+}
+
+.meals__meal:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 15px 0 rgba(128, 128, 128, 0.379);
+}
+
+.meal__attributes,
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.meal__attributes>li {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.meal__icon {
+    font-size: 3rem;
+    color: #f97316;
+}
+
+.meal__content {
+    padding: 1.2rem 4.8rem 4.8rem;
+}
+
+.recipes__link:link,
+.recipes__link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #f97316;
+    border-bottom: 2px solid currentColor;
+    transition: 500ms ease;
+}
+
+.meals__recipes {
+    text-align: center;
+}
+
+.recipes__link:hover,
+.recipes__link:active {
+    border-bottom: 2px solid transparent;
+}
+
+/* *************
+TESTIMONIALS
+************** */
+
+.section-testimonials {
+    padding: 4.2rem 0;
+    background-color: #fdf2e9;
+}
+
+.testimonials__grid {
+    grid-template-columns: 60% 40%;
+    gap: 0;
+}
+
+.testimony__img {
+    width: 7rem;
+    border-radius: 50%;
+}
+
+.testimonials__testimony {
+    align-self: center;
+    padding: 8rem;
+}
+
+/* *************
+GALLERY
+************** */
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.gallery__grid img {
+    display: block;
+    transition: 500ms ease;
+}
+
+.gallery__grid figure {
+    overflow: hidden;
+}
+
+.gallery__grid figure:hover img {
+    scale: 1.2;
+}
+
+/* *************
+PRICING
+************** */
+.section-pricing {
+    padding: 9.6rem 0;
+}
+
+.pricing__plan {
+    border: 2px solid #fdf2e9;
+    width: 75%;
+    border-radius: 1.1rem;
+}
+
+.pricing--starter {
+    justify-self: flex-end;
+}
+
+.pricing--complete {
+    background-color: #fdf2e9;
+    position: relative;
+    overflow: hidden;
+}
+
+.plan__name {
+    font-family: arial;
+    font-size: 1.9rem;
+    letter-spacing: 1.2px;
+    color: #f97316;
+    text-transform: uppercase;
+}
+
+.plan__price {
+    font-size: 6.4rem;
+}
+
+.plan__content {
+    padding: 2.4rem 4.8rem 3.2rem;
+}
+
+.pricing-tag-ylw {
+    font-family: arial;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: yellow;
+    letter-spacing: 1.2px;
+    padding: 0.8rem;
+    position: absolute;
+    right: -1.7rem;
+    top: 1.4rem;
+    transform: rotate(35deg);
+}
+
+.feature__icon {
+    font-size: 4rem;
+    color: #edb181;
+    background-color: #fdf2e9;
+    border-radius: 50%;
+    padding: 2rem;
+    margin-bottom: 2.4rem;
+}
+
+/* *************
+CTA
+************** */
+
+.section-cta {
+    padding: 4.2rem 0 9.6rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.398);
+}
+
+.cta__grid {
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 2fr 1fr;
+    border-radius: 1.2rem;
+    background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+}
+
+.cta__heading {
+    font-size: 4.2rem;
+}
+
+.form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+    gap: 2.4rem;
+}
+
+label {
+    display: block;
+}
+
+.cta__text-box {
+    padding: 4.2rem;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.background {
+    background-image: linear-gradient(to bottom right, rgba(128, 0, 128, 0.198) 50%, rgba(255, 0, 0, 0.251)), url("../img/eating.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input,
+select {
+    width: 90%;
+    padding: 1.1rem 1.6rem;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    border-radius: 1.1rem;
+}
+
+.cta__btn {
+    display: inline-block;
+    border: none;
+    width: 90%;
+    border-radius: 1.1rem;
+    padding: 1.5rem 1.6rem;
+    background-color: white;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(57, 20, 20, 0.355);
+}
+
+/* *************
+FOOTER
+************** */
+.footer {
+    padding: 6.4rem 0;
+    font-size: 1.6rem;
+}
+
+.footer__grid {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.social__list {
+    list-style-type: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-col {
+    list-style-type: none;
+}
+
+.footer__link:link,
+.footer__link:visited {
+    color: #4b5563;
+    text-decoration: none;
+}
+
+.footer__link:hover,
+.footer__link:active {
+    color: #76879e;
+}
+
+.footer__logo img {
+    width: 15rem;
+}
+
+.footer__icon {
+    font-size: 2.4rem;
+    color: #4b5563;
+}
+
+.copyright {
+    font-size: 1.4rem;
+    margin-top: auto;
+}
+
+.social__list {
+    margin-top: 2.4rem;
+}
